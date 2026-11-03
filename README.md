@@ -78,7 +78,7 @@ Display all filtered images using a grid layout for comparison.
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
-image1=cv2.imread("spider.png")
+image1=cv2.imread("Hot Air.jpeg")
 image2=cv2.cvtColor(image1,cv2.COLOR_BGR2RGB)
 kernel=np.ones((11,11),np.float32)/169
 image3=cv2.filter2D(image2,-1,kernel)
@@ -147,8 +147,48 @@ plt.show()
 ```
 
 
+## Output
+### Smoothing Filters
 
+- Averaging filter produces blurred image
 
+  <img width="1095" height="666" alt="image" src="https://github.com/user-attachments/assets/f70b7bc7-8bab-42f5-92d2-cad52129d0c5" />
+
+  <br>
+  
+- Weighted averaging provides smoother result with less distortion
+
+  <img width="1563" height="963" alt="image" src="https://github.com/user-attachments/assets/03dcb732-1ad2-43ab-9641-4a82f9964db0" />
+
+  <br>
+
+- Gaussian filter preserves edges better while reducing noise
+
+  <img width="1557" height="945" alt="image" src="https://github.com/user-attachments/assets/fb0a1f47-4a53-4794-898a-288bc43cf7ef" />
+
+  <br>
+  
+- Median filter removes salt-and-pepper noise effectively  
+
+  <img width="2145" height="1278" alt="image" src="https://github.com/user-attachments/assets/e3126885-55d1-4232-ad87-f40ad9f7851c" />
+
+  <br>
+  
+###  Sharpening Filters
+
+- Laplacian kernel enhances edges and fine details
+
+  <img width="1566" height="936" alt="image" src="https://github.com/user-attachments/assets/97d1d281-f615-4f56-913f-bfcf3b40ee05" />
+
+  <br>
+  
+- Laplacian operator detects edges clearly in grayscale
+
+  <img width="1542" height="936" alt="image" src="https://github.com/user-attachments/assets/2b19de59-6d6f-4d1d-a615-e1be7e70d136" />
+
+  <br>
+
+---
 
 
 
